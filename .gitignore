@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="calculator">
+    <h1>Simple Calculator</h1>
+
+    <div class="row">
+      <input id="num1" type="number" step="any" placeholder="First number" />
+      <select id="op">
+        <option value="+">+</option>
+        <option value="-">−</option>
+        <option value="*">×</option>
+        <option value="/">÷</option>
+      </select>
+      <input id="num2" type="number" step="any" placeholder="Second number" />
+    </div>
+
+    <div class="buttons">
+      <button class="op-btn" data-op="+">+</button>
+      <button class="op-btn" data-op="-">−</button>
+      <button class="op-btn" data-op="*">×</button>
+      <button class="op-btn" data-op="/">÷</button>
+      <button id="calc" class="action">=</button>
+      <button id="clear" class="action">Clear</button>
+    </div>
+
+    <div id="result" aria-live="polite">
+      Result: <span id="result-value"></span>
+    </div>
+    <p class="hint">Tip: type numbers and press Enter, or press + - * / keys to calculate.</p>
+  </div>
+
+  <script src="/static/script.js" defer></script>
+</body>
+</html>
