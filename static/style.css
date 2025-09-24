@@ -1,60 +1,58 @@
-:root {
-  font-family: Inter, system-ui, Arial, sans-serif;
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* Body styling */
 body {
-  display:flex;
-  min-height:100vh;
-  align-items:center;
-  justify-content:center;
-  background:#f5f7fb;
-  margin:0;
+    background-color: #000; /* Black background */
+    color: #00ffea; /* Bright cyan text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
 }
-.calculator{
-  background:#fff;
-  padding:20px 24px;
-  border-radius:12px;
-  box-shadow:0 10px 25px rgba(20,20,40,0.08);
-  width:320px;
-  text-align:center;
+
+/* Calculator inputs and select */
+input, select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #000; /* text inside input */
+    background-color: #00ffea; /* bright cyan inputs */
+    font-weight: bold;
 }
-h1{ margin:0 0 12px; font-size:20px; }
-.row{
-  display:flex;
-  gap:8px;
-  margin-bottom:14px;
-  align-items:center;
-  justify-content:center;
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ff00ff; /* bright pink button */
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out, background-color 0.2s;
 }
-input[type="number"], select{
-  padding:8px 10px;
-  border-radius:8px;
-  border:1px solid #e0e6ef;
-  font-size:14px;
-  width:110px;
-  box-sizing:border-box;
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #ff66ff;
 }
-select{ width:56px; }
-.buttons{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  justify-content:center;
-  margin-bottom:12px;
+
+/* Result text */
+#result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffff00; /* bright yellow for result */
 }
-button{
-  padding:8px 12px;
-  border-radius:8px;
-  border:1px solid #e0e6ef;
-  background:#fff;
-  cursor:pointer;
-  font-size:16px;
-}
-button.action{
-  background:#0b74de;
-  color:white;
-  border:none;
-  padding:8px 14px;
-}
-button.op-btn:active, button.op-btn:hover{ transform:translateY(1px); }
-#result{ font-weight:600; margin-top:6px; }
-.hint{ font-size:12px; color:#666; margin-top:8px; }
